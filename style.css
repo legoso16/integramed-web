@@ -228,3 +228,95 @@ h1, h2, h3 { font-family: 'Poppins', sans-serif; }
     .hero-image { margin-top: 30px; }
     .stats { flex-direction: column; gap: 40px; }
 }
+
+
+/* =========================================
+   DISEÑO PÁGINA "NUESTROS SERVICIOS"
+========================================= */
+.services-page {
+    padding: 60px 10%;
+    background-color: #f7f8f6;
+}
+
+.services-page-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.services-page-title h2 {
+    color: var(--morado);
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.services-grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background: white;
+    border-radius: 20px;
+    overflow: hidden; /* Para que las imágenes respeten las esquinas redondeadas */
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+}
+
+.service-column {
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+.service-img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.service-content {
+    padding: 40px 30px;
+    flex: 1; /* Para que todas las columnas midan lo mismo hacia abajo */
+}
+
+/* Colores exactos basados en tu imagen */
+.col-purple { background-color: #6d1b7b; }
+.col-green { background-color: #5e8a21; }
+.col-blue { background-color: #1a5ea8; }
+
+.service-content h3 {
+    font-size: 1.8rem;
+    margin-top: 0;
+    margin-bottom: 40px;
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+.service-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.service-list li {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+/* El círculo para los íconos */
+.icon-circle {
+    width: 45px;
+    height: 45px;
+    background-color: rgba(255, 255, 255, 0.15); /* Blanco transparente */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+/* Adaptación para celulares (se ponen una debajo de la otra) */
+@media (max-width: 900px) {
+    .services-grid-3 { grid-template-columns: 1fr; }
+}
