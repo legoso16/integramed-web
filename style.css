@@ -326,3 +326,88 @@ h1, h2, h3 { font-family: 'Poppins', sans-serif; }
         gap: 40px; 
     }
 }
+
+/* =========================================
+   DISEÑO PÁGINA "CONVENIOS"
+========================================= */
+.convenios-hero {
+    padding: 80px 10% 40px;
+    background-color: #fafbfc;
+}
+
+.logos-section {
+    padding: 0 10% 80px;
+}
+
+.logos-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.logo-card {
+    background: white;
+    padding: 40px 30px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+    border: 1px solid #f0f0f0;
+    transition: 0.3s;
+}
+
+.logo-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+}
+
+.logo-img-wrapper {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+.logo-img-wrapper img {
+    max-width: 180px;
+    max-height: 80px;
+    object-fit: contain;
+}
+
+.logo-card h3 {
+    color: var(--morado);
+    margin-bottom: 15px;
+}
+
+.logo-card p {
+    font-size: 0.95rem;
+    color: #666;
+    line-height: 1.5;
+}
+
+/* Caja de información inferior */
+.convenio-info {
+    padding-bottom: 80px;
+    display: flex;
+    justify-content: center;
+}
+
+.info-box {
+    background-color: var(--morado-soft);
+    padding: 40px;
+    border-radius: 20px;
+    max-width: 800px;
+    text-align: center;
+    border: 1px dashed var(--morado);
+}
+
+.info-box i {
+    font-size: 2rem;
+    color: var(--morado);
+    margin-bottom: 15px;
+}
+
+.info-box p {
+    margin-bottom: 25px;
+    font-weight: 500;
+}
