@@ -47,7 +47,7 @@ h1, h2, h3 { font-family: 'Poppins', sans-serif; }
 .hero-image { flex: 1; text-align: right; }
 .hero-image img { width: 100%; border-radius: 30px; box-shadow: 20px 20px 60px rgba(0,0,0,0.08); }
 
-.aniversario-title { color: var(--verde); font-size: 1.4rem; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 5px; display: block; }
+.aniversario-title { color: var(--verde); font-size: 1.9rem; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 15px; display: block; }
 .hero h1 { font-size: 3.2rem; line-height: 1.2; margin: 10px 0 20px 0; color: var(--morado); }
 .hero h1 span { color: var(--verde); }
 .hero-btns { display: flex; gap: 15px; margin-top: 30px; }
@@ -59,7 +59,7 @@ h1, h2, h3 { font-family: 'Poppins', sans-serif; }
 .stats {
     display: flex;
     justify-content: space-around;
-    padding: 60px 8%;
+    padding: 50px 8%;
     background: var(--morado);
     color: white;
     text-align: center;
