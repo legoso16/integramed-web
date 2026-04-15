@@ -109,16 +109,15 @@
     window.addEventListener('scroll', function() {
         let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
         
-        // Solo aplica en pantallas de celular (menos de 768px)
-        if (window.innerWidth < 768) {
-            // Si bajas más de 100px y vas hacia abajo
-            if (scrollTop > lastScrollTop && scrollTop > 100) {
-                navbar.classList.add('header-hidden');
-            } else {
-                // Si vas hacia arriba, muéstralo
-                navbar.classList.remove('header-hidden');
-            }
+        // Eliminamos la restricción de ancho para que funcione en PC y Celular
+        if (scrollTop > lastScrollTop && scrollTop > 100) {
+            // Si el usuario baja, escondemos el menú
+            navbar.classList.add('header-hidden');
+        } else {
+            // Si el usuario sube (aunque sea un poco), mostramos el menú
+            navbar.classList.remove('header-hidden');
         }
+        
         lastScrollTop = scrollTop;
     });
 </script>
