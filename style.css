@@ -187,6 +187,69 @@ h1, h2, h3 { font-family: 'Poppins', sans-serif; }
 .benefit-box li { margin-bottom: 15px; font-size: 1.1rem; display: flex; gap: 10px; }
 .benefit-box li::before { content: "✔"; color: var(--verde); font-weight: bold; }
 
+/* =========================================
+   ESTILOS NUEVA SECCIÓN SERVICIOS EN HOME
+========================================= */
+.servicios-home {
+    padding: 80px 8%;
+    background: white;
+}
+
+.servicios-home-container {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.servicios-home-image {
+    flex: 1;
+}
+
+.servicios-home-image img {
+    width: 100%;
+    border-radius: 30px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.servicios-home-text {
+    flex: 1;
+}
+
+.servicios-home-list {
+    list-style: none;
+    padding: 0;
+    margin: 30px 0;
+}
+
+.servicios-home-list li {
+    margin-bottom: 18px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--morado);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.servicios-home-list i {
+    color: var(--verde);
+    font-size: 1.3rem;
+    width: 25px;
+    text-align: center;
+}
+
+/* Ajuste móvil para esta sección */
+@media (max-width: 768px) {
+    .servicios-home-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+    .servicios-home-list li {
+        justify-content: center;
+    }
+}
+
 /* ========================================================
    OPTIMIZACIÓN PROFUNDA PARA CELULARES (RESPONSIVE) 
 ======================================================== */
