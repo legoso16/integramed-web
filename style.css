@@ -334,3 +334,236 @@ h1, h2, h3 { font-family: 'Poppins', sans-serif; }
     .info-col p { font-size: 0.8rem; }
     .footer-col { justify-content: center; display: flex; }
 }
+
+/* =========================================
+   DISEÑO PÁGINA "NUESTROS SERVICIOS" (MODERNO & INTERACTIVO)
+========================================= */
+.servicios-hero-banner {
+    padding: 100px 10%;
+    background: linear-gradient(135deg, var(--morado) 0%, #22123d 100%);
+    color: white;
+    text-align: center;
+}
+
+.hero-banner-content h1 {
+    font-size: 3rem;
+    margin: 20px 0;
+}
+
+.hero-banner-content h1 span {
+    color: var(--verde);
+}
+
+.hero-banner-content p {
+    max-width: 750px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    opacity: 0.9;
+    line-height: 1.6;
+}
+
+/* LA CUADRÍCULA DE TARJETAS */
+.servicios-grid-section {
+    padding: 80px 10%;
+    background-color: #f7f8f6;
+}
+
+.grid-cards-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 tarjetas por fila en PC */
+    gap: 25px;
+}
+
+/* DISEÑO DE CADA TARJETA INDIVIDUAL (ESTILO APP) */
+.service-interactive-card {
+    background: white;
+    padding: 40px 25px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+    border: 1px solid #eee;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-interactive-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(63, 38, 105, 0.08);
+    border-color: var(--verde);
+}
+
+.card-icon-wrapper {
+    width: 65px;
+    height: 65px;
+    background-color: var(--morado-soft);
+    color: var(--morado);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    margin: 0 auto 25px;
+    transition: 0.3s;
+}
+
+.service-interactive-card:hover .card-icon-wrapper {
+    background-color: var(--verde);
+    color: var(--morado);
+}
+
+.service-interactive-card h3 {
+    color: var(--morado);
+    font-size: 1.3rem;
+    margin: 0 0 15px;
+    font-weight: 700;
+}
+
+.service-interactive-card p {
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.5;
+    margin: 0 0 25px;
+    flex-grow: 1; /* Empuja el botón hacia abajo para alineación perfecta */
+}
+
+/* Botón de cada tarjeta */
+.btn-card-action {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 2px solid var(--morado);
+    color: var(--morado);
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.btn-card-action:hover {
+    background-color: var(--morado);
+    color: white;
+}
+
+/* =========================================
+   SECCIÓN ESPECIAL DE ASEGURADOS (BMI/HUMANA)
+========================================= */
+.asegurados-banner-section {
+    padding: 80px 10%;
+    background-color: white;
+}
+
+.asegurados-box {
+    background: var(--morado-soft);
+    border: 1px solid var(--verde);
+    border-radius: 25px;
+    padding: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.asegurados-text {
+    flex: 1.5;
+}
+
+.asegurados-text h2 {
+    color: var(--morado);
+    font-size: 2rem;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.asegurados-text p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    color: #4a4a4a;
+}
+
+.asegurados-steps {
+    display: flex;
+    gap: 20px;
+}
+
+.asegurados-steps .step {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: white;
+    padding: 12px 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+    flex: 1;
+}
+
+.step-num {
+    background-color: var(--verde);
+    color: var(--morado);
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.9rem;
+    flex-shrink: 0;
+}
+
+.step p {
+    margin: 0;
+    font-size: 0.8rem;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.asegurados-cta {
+    flex: 1;
+    text-align: right;
+}
+
+.asegurados-cta .btn-agenda {
+    display: inline-block;
+    width: auto;
+}
+
+/* AJUSTES RESPONSIVOS ADICIONALES PARA LA GRILLA EN MÓVILES */
+@media (max-width: 1200px) {
+    .grid-cards-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas en tablets */
+    }
+    .asegurados-box {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px;
+    }
+    .asegurados-cta {
+        text-align: center;
+        width: 100%;
+    }
+    .asegurados-steps {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 768px) {
+    .grid-cards-container {
+        grid-template-columns: 1fr; /* 1 columna en celular */
+        gap: 20px;
+    }
+    .servicios-hero-banner {
+        padding: 60px 5%;
+    }
+    .servicios-hero-banner h1 {
+        font-size: 2.2rem;
+    }
+    .servicios-grid-section {
+        padding: 40px 5%;
+    }
+    .asegurados-banner-section {
+        padding: 40px 5%;
+    }
+}

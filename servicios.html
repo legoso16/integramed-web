@@ -7,138 +7,169 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-<script defer src="/_vercel/insights/script.js"></script>
-
-<!-- Favicon -->
-<link rel="stylesheet" href="style.css">
-    <!-- Línea para el logo en la pestaña -->
-    <link rel="icon" type="image/png" href="img/favicon.png">
-    
-    <!-- Opcional: Para que se vea bien cuando alguien guarda tu web en un iPhone -->
-    <link rel="apple-touch-icon" href="img/favicon.png">
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-JJNX6JN4CL"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-JJNX6JN4CL');
-</script>
-
+    <script defer src="/_vercel/insights/script.js"></script>
 </head>
 <body>
 
-    <!-- HEADER IDÉNTICO AL PRINCIPAL -->
+    <!-- HEADER PREMIUM -->
     <header class="navbar">
         <div class="top-header">
             <div class="logo">
                 <a href="index.html"><img src="img/logo.png" alt="Integramed Logo"></a>
             </div>
             <div class="cta-group">
-                <a href="https://wa.me/593960520001" target="_blank" class="btn-agenda" onclick="gtag('event', 'click_whatsapp', {'event_category': 'contacto', 'event_label': 'boton_header'});">Agenda tu cita</a>
+                <a href="https://wa.me/593960520001" target="_blank" class="btn-agenda">Agenda tu cita</a>
             </div>
         </div>
         <nav class="main-nav">
             <ul>
                 <li><a href="index.html">Inicio</a></li>
-                <li><a href="#">Telemedicina</a></li>
                 <li><a href="servicios.html">Nuestros Servicios</a></li>
-                <li><a href="#">Salud Ocupacional</a></li>
                 <li><a href="evaluacion-ergo.html">Evaluación Ergo</a></li>
                 <li><a href="convenios.html">Convenios</a></li>
-                <li><a href="#">Pagos</a></li>
-                <li><a href="https://wa.me/593960520001" target="_blank" onclick="gtag('event', 'click_whatsapp', {'event_category': 'contacto', 'event_label': 'menu_navegacion'});">Contacto</a></li>
+                <li><a href="https://wa.me/593960520001" target="_blank">Contacto</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- PÁGINA DE SERVICIOS (Basado en tu imagen) -->
-    <section class="services-page">
-        <div class="services-page-title">
-            <h2>Ecosistema de Salud Integral</h2>
-            <p>Conoce todas las áreas en las que te protegemos a ti, a tu familia y a tu empresa.</p>
+    <!-- HERO DE SERVICIOS -->
+    <section class="servicios-hero-banner">
+        <div class="hero-banner-content">
+            <span class="aniversario-title">Ecosistema de Salud Integral</span>
+            <h1>Atención Médica de <span>Alta Calidad</span></h1>
+            <p>20 años brindando diagnósticos oportunos y prevención de riesgos laborales con el respaldo de la mejor tecnología.</p>
         </div>
+    </section>
 
-        <div class="services-grid-3">
+    <!-- CUADRÍCULA DE SERVICIOS (Estilo BMI 360 / Veris) -->
+    <section class="servicios-grid-section">
+        <div class="grid-cards-container">
             
-            <!-- COLUMNA 1: MORADA -->
-            <div class="service-column col-purple">
-                <img src="https://images.unsplash.com/photo-1638202993928-7267aad84c31?auto=format&fit=crop&w=500&q=80" alt="Cuidado Integral" class="service-img">
-                <div class="service-content">
-                    <h3>Cuidado Integral para tu Salud.</h3>
-                    <ul class="service-list">
-                        <li><span class="icon-circle"><i class="fa-solid fa-stethoscope"></i></span> Consulta médica</li>
-                        <li><span class="icon-circle"><i class="fa-solid fa-heart-pulse"></i></span> Especialidades</li>
-                        <li><span class="icon-circle"><i class="fa-solid fa-capsules"></i></span> Farmacia</li>
-                        <li><span class="icon-circle"><i class="fa-solid fa-band-aid"></i></span> Procedimientos ambulatorios</li>
-                    </ul>
-                </div>
+            <!-- Servicio 1 -->
+            <div class="service-interactive-card">
+                <div class="card-icon-wrapper"><i class="fa-solid fa-user-doctor"></i></div>
+                <h3>Consulta Externa</h3>
+                <p>Atención médica presencial con especialistas de primer nivel en un ambiente seguro y confiable.</p>
+                <a href="https://wa.me/593960520001" target="_blank" class="btn-card-action">Consultar Horarios</a>
             </div>
 
-            <!-- COLUMNA 2: VERDE -->
-            <div class="service-column col-green">
-                <img src="https://images.unsplash.com/photo-1579154204601-01588f351e67?auto=format&fit=crop&w=500&q=80" alt="Exámenes de diagnóstico" class="service-img">
-                <div class="service-content">
-                    <h3>Exámenes de diagnóstico y farmacia.</h3>
-                    <ul class="service-list">
-                        <li><span class="icon-circle"><i class="fa-solid fa-microscope"></i></span> Laboratorio</li>
-                        <li><span class="icon-circle"><i class="fa-solid fa-x-ray"></i></span> Imagen</li>
-                        <li><span class="icon-circle"><i class="fa-solid fa-wave-square"></i></span> Endoscopía</li>
-                        <li><span class="icon-circle"><i class="fa-solid fa-person-walking"></i></span> Rehabilitación</li>
-                        <li><span class="icon-circle"><i class="fa-solid fa-briefcase-medical"></i></span> Ocupacionales</li>
-                    </ul>
-                </div>
+            <!-- Servicio 2 -->
+            <div class="service-interactive-card">
+                <div class="card-icon-wrapper"><i class="fa-solid fa-video"></i></div>
+                <h3>Video Consulta</h3>
+                <p>Accede a un diagnóstico de alta calidad desde la comodidad de tu hogar u oficina con telemedicina.</p>
+                <a href="https://wa.me/593960520001" target="_blank" class="btn-card-action">Iniciar Telemedicina</a>
             </div>
 
-            <!-- COLUMNA 3: AZUL -->
-            <div class="service-column col-blue">
-                <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=500&q=80" alt="Prevención de Riesgos" class="service-img">
-                <div class="service-content">
-                    <h3>Prevención de Riesgos Laborales.</h3>
-                    <ul class="service-list">
-                        <li><span class="icon-circle"><i class="fa-solid fa-chair"></i></span> Estudios Ergonómicos</li>
-                        <li><span class="icon-circle"><i class="fa-solid fa-clipboard-list"></i></span> Cumplimiento SUT</li>
-                        <li><span class="icon-circle"><i class="fa-solid fa-house-medical"></i></span> Dispensarios médicos</li>
-                    </ul>
-                </div>
+            <!-- Servicio 3 -->
+            <div class="service-interactive-card">
+                <div class="card-icon-wrapper"><i class="fa-solid fa-microscope"></i></div>
+                <h3>Laboratorio Clínico</h3>
+                <p>Análisis clínicos automatizados y pruebas especiales con la mayor precisión y entrega rápida de resultados.</p>
+                <a href="https://wa.me/593960520001" target="_blank" class="btn-card-action">Ver Exámenes</a>
+            </div>
+
+            <!-- Servicio 4 -->
+            <div class="service-interactive-card">
+                <div class="card-icon-wrapper"><i class="fa-solid fa-house-medical"></i></div>
+                <h3>Laboratorio a Domicilio</h3>
+                <p>Llevamos nuestro equipo hasta tu hogar para la toma de muestras de forma cómoda y sin esperas.</p>
+                <a href="https://wa.me/593960520001" target="_blank" class="btn-card-action">Solicitar Visita</a>
+            </div>
+
+            <!-- Servicio 5 -->
+            <div class="service-interactive-card">
+                <div class="card-icon-wrapper"><i class="fa-solid fa-x-ray"></i></div>
+                <h3>Diagnóstico por Imagen</h3>
+                <p>Estudios radiológicos y de diagnóstico por imagen para complementar tus evaluaciones médicas.</p>
+                <a href="https://wa.me/593960520001" target="_blank" class="btn-card-action">Agendar Imagen</a>
+            </div>
+
+            <!-- Servicio 6 -->
+            <div class="service-interactive-card">
+                <div class="card-icon-wrapper"><i class="fa-solid fa-wave-square"></i></div>
+                <h3>Endoscopía</h3>
+                <p>Procedimientos especializados para la detección temprana y cuidado de tu salud digestiva.</p>
+                <a href="https://wa.me/593960520001" target="_blank" class="btn-card-action">Más Información</a>
+            </div>
+
+            <!-- Servicio 7 -->
+            <div class="service-interactive-card">
+                <div class="card-icon-wrapper"><i class="fa-solid fa-person-walking-rehab"></i></div>
+                <h3>Terapias y Rehabilitación</h3>
+                <p>Fisioterapia de alta calidad diseñada para una recuperación activa y mejora de tu movilidad física.</p>
+                <a href="https://wa.me/593960520001" target="_blank" class="btn-card-action">Programar Sesión</a>
+            </div>
+
+            <!-- Servicio 8 -->
+            <div class="service-interactive-card">
+                <div class="card-icon-wrapper"><i class="fa-solid fa-capsules"></i></div>
+                <h3>Farmacia Integrada</h3>
+                <p>Adquiere tus medicamentos recetados directamente en nuestro centro de manera ágil y segura.</p>
+                <a href="https://wa.me/593960520001" target="_blank" class="btn-card-action">Consultar Stock</a>
             </div>
 
         </div>
     </section>
 
-    <!-- FOOTER IDÉNTICO AL PRINCIPAL -->
+    <!-- SECCIÓN ESPECIAL ASEGURADOS (EL GANCHO COMERCIAL BMI/HUMANA) -->
+    <section class="asegurados-banner-section">
+        <div class="asegurados-box">
+            <div class="asegurados-text">
+                <h2>¿Eres asegurado de BMI o Humana?</h2>
+                <p>En Integramed te facilitamos todo. Atendemos tus consultas de especialidad y exámenes mediante el sistema de <strong>copago directo</strong>. No necesitas hacer procesos de reembolso tediosos ni papeleo.</p>
+                <div class="asegurados-steps">
+                    <div class="step"><span class="step-num">1</span> <p>Presenta tu credencial o cédula.</p></div>
+                    <div class="step"><span class="step-num">2</span> <p>Validamos tu cobertura en minutos.</p></div>
+                    <div class="step"><span class="step-num">3</span> <p>Pagas únicamente tu valor de copago.</p></div>
+                </div>
+            </div>
+            <div class="asegurados-cta">
+                <a href="https://wa.me/593960520001" target="_blank" class="btn-agenda">Consultar Cobertura por WhatsApp</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER MÁS PEQUEÑO -->
     <footer class="custom-footer">
         <div class="footer-grid">
-            <div class="footer-col brand-col"><h3 class="footer-logo-text">Integramed</h3></div>
-            <div class="footer-col info-col"><p>Dirección: Calle Alemania N29-245 y Ave. Eloy Alfaro. Quito, Pichincha</p></div>
-            <div class="footer-col brand-col"><a href="#" class="fb-btn"><i class="fab fa-facebook-f"></i> visítanos</a></div>
-            <div class="footer-col info-col"><p><a href="#" class="footer-link">Integramed-Home</a></p></div>
-            <div class="footer-col brand-col"><p class="contacto-label">Contacto</p></div>
-            <div class="footer-col info-col"><p>(02) 2557000 / 2234 458</p></div>
+            <div class="footer-col brand-col">
+                <h3 class="footer-logo-text">Integramed</h3>
+            </div>
+            <div class="footer-col info-col">
+                <p>Dirección: Calle Alemania N29-245 y Ave. Eloy Alfaro. Quito, Pichincha</p>
+            </div>
+            
+            <div class="footer-col brand-col">
+                <a href="#" class="fb-btn"><i class="fab fa-facebook-f"></i> visítanos</a>
+            </div>
+            <div class="footer-col info-col">
+                <p><a href="#" class="footer-link">Integramed-Home</a></p>
+            </div>
+
+            <div class="footer-col brand-col">
+                <p class="contacto-label">Contacto</p>
+            </div>
+            <div class="footer-col info-col">
+                <p>(02) 2557000 / 2234 458</p>
+            </div>
         </div>
     </footer>
 
-
+    <!-- SCRIPT DE RETRACCIÓN DE MENÚ -->
     <script>
     let lastScrollTop = 0;
     const navbar = document.querySelector('.navbar');
 
     window.addEventListener('scroll', function() {
         let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        
-        // Eliminamos la restricción de ancho para que funcione en PC y Celular
         if (scrollTop > lastScrollTop && scrollTop > 100) {
-            // Si el usuario baja, escondemos el menú
             navbar.classList.add('header-hidden');
         } else {
-            // Si el usuario sube (aunque sea un poco), mostramos el menú
             navbar.classList.remove('header-hidden');
         }
-        
         lastScrollTop = scrollTop;
     });
-</script>
+    </script>
 </body>
 </html>
