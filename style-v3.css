@@ -1,0 +1,665 @@
+/* VARIABLES DE DISEÑO */
+:root {
+    --verde: rgb(195, 211, 81);
+    --morado: rgb(63, 38, 105);
+    --rojo: rgb(235, 85, 80);
+    --morado-soft: rgba(63, 38, 105, 0.05);
+    --blanco: #ffffff;
+    --texto: #4a4a4a;
+}
+
+* { box-sizing: border-box; }
+
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    color: var(--texto);
+    background-color: #fafbfc;
+}
+
+h1, h2, h3 { font-family: 'Poppins', sans-serif; }
+
+/* HEADER PREMIUM */
+.navbar {
+    background: var(--blanco); padding: 0; position: sticky; top: 0;
+    z-index: 1000; box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+    transition: transform 0.3s ease; /* Efecto suave para esconderse */
+}
+
+/* Clase para ocultar el menú con el scroll (se activa con el Script) */
+.header-hidden {
+    transform: translateY(-100%);
+}
+
+.top-header { display: flex; justify-content: space-between; align-items: center; padding: 15px 8%; }
+.logo img { height: 60px; }
+
+.btn-agenda {
+    background: var(--rojo); color: white; padding: 14px 28px;
+    border-radius: 12px; text-decoration: none; font-weight: 600; transition: 0.3s;
+}
+.btn-agenda:hover { transform: translateY(-2px); box-shadow: 0 5px 15px rgba(235, 85, 80, 0.4); }
+
+/* NAVEGACIÓN */
+.main-nav { background: var(--morado-soft); border-top: 1px solid #eee; }
+.main-nav ul { list-style: none; display: flex; justify-content: center; gap: 40px; padding: 12px 0; margin: 0; }
+.main-nav a { text-decoration: none; color: var(--morado); font-weight: 500; font-size: 0.95rem; transition: 0.3s; }
+.main-nav a:hover { color: var(--verde); }
+
+/* HERO SECTION */
+.hero { padding: 80px 8%; background: radial-gradient(circle at top right, rgba(195, 211, 81, 0.1), transparent); }
+.hero-container { display: flex; align-items: center; gap: 50px; }
+.hero-text { flex: 1; }
+.hero-image { flex: 1; text-align: right; }
+.hero-image img { width: 100%; border-radius: 30px; box-shadow: 20px 20px 60px rgba(0,0,0,0.08); }
+
+.aniversario-title { color: var(--verde); font-size: 1.9rem; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 15px; display: block; }
+.hero h1 { font-size: 3.2rem; line-height: 1.2; margin: 10px 0 20px 0; color: var(--morado); }
+.hero h1 span { color: var(--verde); }
+.hero-btns { display: flex; gap: 15px; margin-top: 30px; }
+
+.btn-primary { background: var(--morado); color: white; padding: 12px 25px; text-decoration: none; border-radius: 8px; font-weight: 600; }
+.btn-secondary { border: 2px solid var(--morado); color: var(--morado); padding: 12px 25px; text-decoration: none; border-radius: 8px; font-weight: 600; }
+
+/* SECCIÓN STATS (CONFIANZA) */
+.stats {
+    display: flex;
+    justify-content: space-around;
+    padding: 60px 8%;
+    background: var(--morado);
+    color: white;
+    text-align: center;
+}
+.stat-item h2 {
+    font-size: 3.5rem;
+    color: var(--verde);
+    margin: 0 0 10px 0;
+}
+.stat-item p {
+    font-size: 1.1rem;
+    margin: 0;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+/* =========================================
+   ESTILOS NUEVA SECCIÓN SERVICIOS EN HOME
+========================================= */
+.servicios-home {
+    padding: 80px 8%;
+    background: white;
+}
+
+.servicios-home-container {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.servicios-home-image {
+    flex: 1;
+}
+
+.servicios-home-image img {
+    width: 100%;
+    border-radius: 30px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.servicios-home-text {
+    flex: 1;
+}
+
+.servicios-home-list {
+    list-style: none;
+    padding: 0;
+    margin: 30px 0;
+}
+
+.servicios-home-list li {
+    margin-bottom: 18px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--morado);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.servicios-home-list i {
+    color: var(--verde);
+    font-size: 1.3rem;
+    width: 25px;
+    text-align: center;
+}
+
+/* SECCIÓN DE BLOG */
+.blog-section { padding: 60px 8%; background: white; }
+.blog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 40px; }
+.blog-card { background: white; border-radius: 20px; overflow: hidden; border: 1px solid #eaeaea; transition: 0.3s; }
+.blog-card:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0,0,0,0.08); }
+.blog-card img { width: 100%; height: 250px; object-fit: cover; }
+.blog-content { padding: 30px; }
+.blog-category { background: var(--verde); color: var(--morado); padding: 5px 12px; border-radius: 5px; font-size: 0.8rem; font-weight: 600; }
+.blog-content h3 { color: var(--morado); font-size: 1.4rem; margin: 15px 0; line-height: 1.3; }
+.btn-link { color: var(--rojo); text-decoration: none; font-weight: bold; }
+
+/* CONTACTO */
+.contact-section { background-color: #f7f8f6; padding: 50px 10%; display: flex; justify-content: center; }
+.contact-wrapper { width: 100%; max-width: 700px; }
+.contact-wrapper .section-title h2 { font-size: 2rem; }
+.minimal-form .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 25px; margin-bottom: 25px; }
+.minimal-form .split-left { grid-template-columns: 1fr; }
+.half-width { width: 48%; }
+.minimal-form input, .minimal-form textarea { width: 100%; padding: 8px 5px; border: none; border-bottom: 2px solid var(--morado); background: transparent; font-family: 'Inter', sans-serif; font-size: 0.95rem; font-weight: 500; color: #333; outline: none; resize: none; }
+.minimal-form input::placeholder, .minimal-form textarea::placeholder { color: #6a6a6a; font-weight: 500; }
+.btn-container { text-align: center; margin-top: 30px; }
+.btn-enviar { background: white; color: #333; font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 1.1rem; padding: 12px 45px; border: none; box-shadow: 0 4px 15px rgba(0,0,0,0.05); cursor: pointer; transition: 0.3s; }
+
+/* FOOTER */
+.custom-footer { background-color: #f4f5f3; border-top: 6px solid var(--verde); padding: 40px 10%; }
+.footer-grid { display: grid; grid-template-columns: 180px 1fr; row-gap: 20px; column-gap: 20px; align-items: center; }
+.footer-logo-text { font-family: 'Poppins', sans-serif; color: var(--morado); font-size: 1.5rem; font-weight: 300; margin: 0; }
+.fb-btn { display: inline-flex; align-items: center; background-color: #5b76a6; color: white; padding: 4px 10px; border-radius: 4px; border: 1px solid #4a638f; text-decoration: none; font-size: 0.75rem; gap: 6px; }
+.contacto-label { margin: 0; font-weight: 400; color: #333; font-size: 0.95rem; }
+.info-col p { margin: 0; color: #333; font-size: 0.85rem; }
+.footer-link { color: #333; text-decoration: underline; }
+
+/* ==========================================================================
+   DISEÑO PÁGINA "NUESTROS SERVICIOS" (PANELES CON FONDO Y TARJETAS BLANCAS)
+   ========================================================================== */
+.servicios-hero-banner {
+    padding: 100px 10%;
+    background: linear-gradient(135deg, var(--morado) 0%, #22123d 100%);
+    color: white;
+    text-align: center;
+}
+
+.hero-banner-content h1 {
+    font-size: 3rem;
+    margin: 20px 0;
+}
+
+.hero-banner-content h1 span {
+    color: var(--verde);
+}
+
+.hero-banner-content p {
+    max-width: 750px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    opacity: 0.9;
+    line-height: 1.6;
+}
+
+/* LA SECCIÓN COMPLETA DE SERVICIOS */
+.servicios-grid-section {
+    padding: 80px 10%;
+    background-color: #ffffff; /* Fondo de la página blanco puro */
+}
+
+/* LOS PANELES DE FONDO COLOreados detrás de las tarjetas */
+.services-group {
+    padding: 50px 40px;
+    border-radius: 30px;
+    margin-bottom: 50px;
+}
+
+/* Panel Morado Difuminado */
+.group-purple {
+    background-color: rgba(63, 38, 105, 0.04); /* 4% de opacidad de fondo */
+    border: 1px solid rgba(63, 38, 105, 0.07);
+}
+
+/* Panel Verde Difuminado */
+.group-green {
+    background-color: rgba(195, 211, 81, 0.06); /* 6% de opacidad de fondo */
+    border: 1px solid rgba(195, 211, 81, 0.12);
+}
+
+/* TÍTULOS DE SECCIÓN */
+.group-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.6rem;
+    margin-top: 0;
+    margin-bottom: 35px;
+    padding-left: 15px;
+    text-align: left;
+    font-weight: 700;
+}
+
+.title-purple {
+    border-left: 5px solid var(--morado);
+    color: var(--morado);
+}
+
+.title-green {
+    border-left: 5px solid var(--verde);
+    color: #556c1d;
+}
+
+/* Contenedor de la grilla interna del panel */
+.grid-cards-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 tarjetas blancas por fila */
+    gap: 25px;
+}
+
+/* LAS TARJETAS (BLANCAS POR DEFECTO PARA FLOTAR) */
+.service-interactive-card {
+    background: #ffffff; /* Tarjeta blanca sólida */
+    padding: 35px 22px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.service-interactive-card:hover {
+    transform: translateY(-8px);
+}
+
+/* Borde y sombra suave al pasar el mouse por las tarjetas del grupo morado */
+.card-purple-tint {
+    border: 1px solid rgba(63, 38, 105, 0.08);
+}
+
+.card-purple-tint:hover {
+    border-color: var(--morado);
+    box-shadow: 0 15px 40px rgba(63, 38, 105, 0.12);
+}
+
+/* Borde y sombra suave al pasar el mouse por las tarjetas del grupo verde */
+.card-green-tint {
+    border: 1px solid rgba(195, 211, 81, 0.15);
+}
+
+.card-green-tint:hover {
+    border-color: var(--verde);
+    box-shadow: 0 15px 40px rgba(195, 211, 81, 0.18);
+}
+
+/* CONTROL DE LOS ÍCONOS */
+.card-icon-wrapper {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    margin: 0 auto 20px;
+    transition: 0.3s;
+}
+
+/* Iconos de la sección Morada */
+.card-purple-tint .card-icon-wrapper {
+    background-color: rgba(63, 38, 105, 0.08);
+    color: var(--morado);
+}
+
+.card-purple-tint:hover .card-icon-wrapper {
+    background-color: var(--morado);
+    color: white;
+}
+
+/* Iconos de la sección Verde */
+.card-green-tint .card-icon-wrapper {
+    background-color: rgba(195, 211, 81, 0.15);
+    color: #556c1d;
+}
+
+.card-green-tint:hover .card-icon-wrapper {
+    background-color: var(--verde);
+    color: var(--morado);
+}
+
+.service-interactive-card h3 {
+    color: var(--morado);
+    font-size: 1.25rem;
+    margin: 0 0 12px;
+    font-weight: 700;
+}
+
+.service-interactive-card p {
+    font-size: 0.88rem;
+    color: #555;
+    line-height: 1.5;
+    margin: 0 0 20px;
+    flex-grow: 1;
+}
+
+/* Indicadores internos de cada tarjeta */
+.card-specs {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    text-align: left;
+    margin-bottom: 25px;
+    border-top: 1px solid rgba(0,0,0,0.04);
+    padding-top: 15px;
+}
+
+.card-specs span {
+    font-size: 0.8rem;
+    color: var(--morado);
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.card-specs i {
+    color: var(--verde);
+    font-size: 0.9rem;
+    width: 15px;
+    text-align: center;
+}
+
+/* Botones de acción */
+.btn-card-action {
+    display: inline-block;
+    padding: 10px 15px;
+    border: 2px solid var(--morado);
+    color: var(--morado);
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.btn-card-action:hover {
+    background-color: var(--morado);
+    color: white;
+    border-color: var(--morado);
+}
+
+/* =========================================
+   SECCIÓN DE ASEGURADOS (BMI/HUMANA)
+   ========================================= */
+.asegurados-banner-section {
+    padding: 80px 10%;
+    background-color: white;
+}
+
+.asegurados-box {
+    background: var(--morado-soft);
+    border: 1px solid var(--verde);
+    border-radius: 25px;
+    padding: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.asegurados-text {
+    flex: 1.5;
+}
+
+.asegurados-text h2 {
+    color: var(--morado);
+    font-size: 2rem;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.asegurados-text p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    color: #4a4a4a;
+}
+
+.asegurados-steps {
+    display: flex;
+    gap: 20px;
+}
+
+.asegurados-steps .step {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: white;
+    padding: 12px 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+    flex: 1;
+}
+
+.step-num {
+    background-color: var(--verde);
+    color: var(--morado);
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.9rem;
+    flex-shrink: 0;
+}
+
+.step p {
+    margin: 0;
+    font-size: 0.8rem;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.asegurados-cta {
+    flex: 1;
+    text-align: right;
+}
+
+.asegurados-cta .btn-agenda {
+    display: inline-block;
+    width: auto;
+}
+
+/* =========================================
+   SOPORTE RESPONSIVO MULTI-PANTALLA
+   ========================================= */
+@media (max-width: 1200px) {
+    .grid-cards-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas en tablets */
+    }
+    .asegurados-box {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px;
+    }
+    .asegurados-cta {
+        text-align: center;
+        width: 100%;
+    }
+    .asegurados-steps {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 768px) {
+    .grid-cards-container {
+        grid-template-columns: 1fr; /* 1 sola columna ordenada en celulares */
+        gap: 20px;
+    }
+    .services-group {
+        padding: 30px 20px; /* Reducimos el margen interno en celular */
+        border-radius: 20px;
+    }
+    .servicios-hero-banner {
+        padding: 60px 5%;
+    }
+    .servicios-hero-banner h1 {
+        font-size: 2.2rem;
+    }
+    .servicios-grid-section {
+        padding: 40px 5%;
+    }
+    .asegurados-banner-section {
+        padding: 40px 5%;
+    }
+    .group-title {
+        font-size: 1.3rem;
+        margin-bottom: 25px;
+    }
+}
+
+/* PÁGINA CONVENIOS */
+.convenios-hero { padding: 80px 10% 40px; background-color: #fafbfc; }
+.logos-section { padding: 0 10% 80px; }
+.logos-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+.logo-card { background: white; padding: 40px 30px; border-radius: 20px; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.03); border: 1px solid #f0f0f0; transition: 0.3s; }
+.logo-card:hover { transform: translateY(-5px); box-shadow: 0 15px 40px rgba(0,0,0,0.08); }
+.logo-img-wrapper { height: 100px; display: flex; align-items: center; justify-content: center; margin-bottom: 25px; }
+.logo-img-wrapper img { max-width: 180px; max-height: 80px; object-fit: contain; }
+.logo-card h3 { color: var(--morado); margin-bottom: 15px; }
+.logo-card p { font-size: 0.95rem; color: #666; line-height: 1.5; }
+.convenio-info { padding-bottom: 80px; display: flex; justify-content: center; }
+.info-box { background-color: var(--morado-soft); padding: 40px; border-radius: 20px; max-width: 800px; text-align: center; border: 1px dashed var(--morado); }
+.info-box i { font-size: 2rem; color: var(--morado); margin-bottom: 15px; }
+.info-box p { margin-bottom: 25px; font-weight: 500; }
+
+/* PÁGINA "EVALUACIÓN ERGO" */
+.ergo-hero { padding: 100px 10%; background: linear-gradient(135deg, var(--morado) 0%, #2a1a4a 100%); color: white; text-align: center; }
+.tech-badge { background: var(--verde); color: var(--morado); padding: 8px 20px; border-radius: 50px; font-weight: 700; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1px; }
+.ergo-hero h1 { font-size: 3rem; margin: 25px 0; }
+.ergo-hero h1 span { color: var(--verde); }
+.ergo-hero p { max-width: 800px; margin: 0 auto; font-size: 1.2rem; opacity: 0.9; }
+.ibv-intro { padding: 80px 10%; background: white; }
+.ibv-container { display: flex; align-items: center; gap: 60px; }
+.ibv-text { flex: 1; }
+.ibv-image { flex: 1; }
+.ibv-image img { width: 100%; border-radius: 20px; box-shadow: 0 20px 50px rgba(0,0,0,0.1); }
+.ibv-features { margin-top: 30px; }
+.ibv-feat-item { display: flex; align-items: center; gap: 15px; margin-bottom: 20px; font-weight: 600; color: var(--morado); }
+.ibv-feat-item i { color: var(--verde); font-size: 1.5rem; }
+.ergo-modules { padding: 80px 10%; background: #f8f9fa; text-align: center; }
+.modules-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-top: 50px; }
+.module-card { background: white; padding: 40px; border-radius: 20px; transition: 0.3s; border-bottom: 4px solid var(--verde); }
+.module-card i { font-size: 3rem; color: var(--morado); margin-bottom: 20px; }
+.module-card h3 { color: var(--morado); margin-bottom: 15px; }
+.ergo-benefits { padding: 80px 10%; background: white; }
+.benefit-box { background: var(--morado-soft); padding: 50px; border-radius: 30px; border: 1px solid var(--verde); text-align: center; }
+.benefit-box ul { list-style: none; padding: 0; margin: 30px 0; text-align: left; max-width: 600px; margin: 30px auto; }
+.benefit-box li { margin-bottom: 15px; font-size: 1.1rem; display: flex; gap: 10px; }
+.benefit-box li::before { content: "✔"; color: var(--verde); font-weight: bold; }
+
+/* ========================================================
+   RE-DISEÑO TOTAL PARA CELULARES (RESPONSIVE) 
+======================================================== */
+@media (max-width: 768px) {
+    /* Header compacto: Logo arriba y botón abajo centrados */
+    .top-header {
+        flex-direction: column;
+        gap: 12px;
+        padding: 15px 5%;
+        text-align: center;
+    }
+    
+    .logo img { height: 42px; }
+    
+    .btn-agenda {
+        width: 100%; 
+        padding: 10px;
+        font-size: 0.85rem;
+        display: block;
+    }
+
+    /* Menú mucho más compacto y eficiente */
+    .main-nav ul {
+        flex-wrap: wrap;
+        gap: 8px 12px;
+        padding: 12px 5%;
+        justify-content: center;
+    }
+    
+    .main-nav a { font-size: 0.75rem; letter-spacing: 0; }
+
+    /* Hero Principal con textos optimizados */
+    .hero { padding: 40px 5%; }
+    .hero-container { flex-direction: column; text-align: center; gap: 30px; }
+    .aniversario-title { font-size: 1.1rem; letter-spacing: 1px; margin-bottom: 10px; }
+    .hero h1 { font-size: 1.9rem; }
+    .hero p { font-size: 0.9rem; }
+    .hero-image { text-align: center; width: 100%; }
+    .hero-btns { justify-content: center; flex-direction: column; gap: 10px; }
+    .btn-primary, .btn-secondary { width: 100%; text-align: center; padding: 10px; }
+
+    /* Stats ajustadas */
+    .stats { flex-direction: column; gap: 30px; padding: 40px 5%; }
+    .stat-item h2 { font-size: 2.3rem; }
+    .stat-item p { font-size: 0.9rem; }
+
+    /* Sección de Servicios en Home */
+    .servicios-home-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+    .servicios-home-list li {
+        justify-content: center;
+        font-size: 1rem;
+    }
+
+    /* Página de Servicios (Tríptico en móviles) */
+    .triptico-container {
+        grid-template-columns: 1fr; /* Pasa de 3 a 1 columna */
+        gap: 40px;
+    }
+    .convenios-wrapper-box {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px;
+    }
+    .convenios-action-side {
+        text-align: center;
+        width: 100%;
+    }
+    .servicios-hero-banner {
+        padding: 60px 5%;
+    }
+    .servicios-hero-banner h1 {
+        font-size: 2.2rem;
+    }
+    .triptico-section {
+        padding: 40px 5%;
+    }
+    .convenios-banner-servicios {
+        padding: 40px 5%;
+    }
+
+    /* ARREGLO BOTÓN VERDE (Badge Ergo) en móviles */
+    .tech-badge {
+        display: inline-block;
+        white-space: normal;
+        max-width: 90%;
+        line-height: 1.3;
+        font-size: 0.75rem;
+        padding: 8px 15px;
+        text-align: center;
+    }
+    
+    .ergo-hero h1 { font-size: 1.8rem; }
+    .ibv-container { flex-direction: column; gap: 30px; }
+    .ibv-feat-item { font-size: 0.9rem; }
+
+    /* Contacto y Blog */
+    .blog-content h3 { font-size: 1.2rem; }
+    .contact-section { padding: 40px 5%; }
+    .minimal-form .form-row { grid-template-columns: 1fr; gap: 20px; }
+    .half-width { width: 100%; }
+    .btn-enviar { width: 100%; padding: 12px; }
+
+    /* Footer eficiente */
+    .custom-footer { padding: 30px 5%; }
+    .footer-grid { grid-template-columns: 1fr; text-align: center; }
+    .footer-logo-text { font-size: 1.3rem; }
+    .info-col p { font-size: 0.8rem; }
+    .footer-col { justify-content: center; display: flex; }
+}
